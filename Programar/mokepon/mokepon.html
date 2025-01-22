@@ -49,19 +49,24 @@
             </label>
         </div>
         <div class="contenedor-boton">
-            <button id="boton-mascotas">¡Seleccionar mascota!</button>
+            <button id="boton-mascotas" onclick="cambiarFondo()">Seleccionar Mascota</button>
         </div>
-    </section>
+    </section>           
     <section id="seleccionar-ataque" style="display:none;">
-        <h2>Elige tu ataque:</h2>
+        <h1><strong>Elige tu ataque</strong></h1>
         <div class="info-vidas">
-            <p><strong>Tu mascota: </strong><span id="mascota-jugador">Ratigueya</span> tiene <span id="vidas-jugador">3</span> vidas</p>
-            <p><strong>La mascota del enemigo: </strong><span id="mascota-enemigo"></span> tiene <span id="vidas-enemigo">3</span> vidas</p>
+            <p><strong>Tu mascota</strong> <span id="mascota-jugador">
+                <img src="./assets/mokepons_mokepon_Tucapalma_attack.png" alt="Tucapalma" class="imagen-mascota">
+            </span>tiene <span id="vidas-jugador"> </span> vidas</p>
+            <p><strong>La mascota del enemigo</strong> <span id="mascota-enemigo">
+                <img src="./assets/mokepons_mokepon_hipodoge_attack.webp" alt="Hipodge" class="imagen-mascota">
+            </span>tiene <span id="vidas-enemigo"></span> vidas</p>
         </div>
+
         <div class="botones-ataque">
             <button id="boton-fuego" class="boton-ataque">Fuego 🔥</button>
             <button id="boton-agua" class="boton-ataque">Agua 💧</button>
-            <button id="boton-tierra" class="boton-ataque">Tierra 🌳</button>
+            <button id="boton-tierra" class="boton-ataque">Tierra 🌍</button>
         </div>
     </section>
 

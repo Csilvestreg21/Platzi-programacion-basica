@@ -39,6 +39,12 @@ function iniciarJuego() {
     document.getElementById('vidas-enemigo').innerHTML = vidasEnemigo;
 }
 
+// Función para generar un número aleatorio
+function aleatorio(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Función para seleccionar la mascota del jugador
 function seleccionarMascotaJugador() {
     let sectionseleccionarMascota = document.getElementById('seleccionar-mascota');
     let sectionseleccionarAtaque = document.getElementById('seleccionar-ataque');
@@ -53,66 +59,70 @@ function seleccionarMascotaJugador() {
 
     // Comprobamos si se ha seleccionado alguna mascota
     if (inputhipodoge.checked) {
-        spanMascotaJugador.innerHTML = 'Hipodge';
+        spanMascotaJugador.innerHTML = '<img src="./assets/mokepons_mokepon_hipodoge_attack.webp" alt="Hipodge" class="imagen-mascota">';
         sectionseleccionarMascota.style.display = 'none';
-        sectionseleccionarAtaque.style.display = 'block';  // Si se seleccionó una mascota, mostramos la sección de ataque
+        sectionseleccionarAtaque.style.display = 'block';
+        seleccionarMascotaEnemigo(); // Llamamos a la función para que el enemigo elija su mascota
     } else if (inputcapipepo.checked) {
-        spanMascotaJugador.innerHTML = 'Capipepo';
+        spanMascotaJugador.innerHTML = '<img src="./assets/mokepons_mokepon_capipepo_attack.webp" alt="Capipepo" class="imagen-mascota">';
         sectionseleccionarMascota.style.display = 'none';
         sectionseleccionarAtaque.style.display = 'block';
+        seleccionarMascotaEnemigo(); // Llamamos a la función para que el enemigo elija su mascota
     } else if (inputratigueya.checked) {
-        spanMascotaJugador.innerHTML = 'Ratigueya';
+        spanMascotaJugador.innerHTML = '<img src="./assets/mokepons_mokepon_ratigueya_attack.webp" alt="Ratigueya" class="imagen-mascota">';
         sectionseleccionarMascota.style.display = 'none';
         sectionseleccionarAtaque.style.display = 'block';
+        seleccionarMascotaEnemigo(); // Llamamos a la función para que el enemigo elija su mascota
     } else if (inputlangostelvis.checked) {
-        spanMascotaJugador.innerHTML = 'Langostelvis';
+        spanMascotaJugador.innerHTML = '<img src="./assets/mokepons_mokepon_Langostelvis_attack.png" alt="Langostelvis" class="imagen-mascota">';
         sectionseleccionarMascota.style.display = 'none';
         sectionseleccionarAtaque.style.display = 'block';
+        seleccionarMascotaEnemigo(); // Llamamos a la función para que el enemigo elija su mascota
     } else if (inputtucapalma.checked) {
-        spanMascotaJugador.innerHTML = 'Tucapalma';
+        spanMascotaJugador.innerHTML = '<img src="./assets/mokepons_mokepon_Tucapalma_attack.png" alt="Tucapalma" class="imagen-mascota">';
         sectionseleccionarMascota.style.display = 'none';
         sectionseleccionarAtaque.style.display = 'block';
+        seleccionarMascotaEnemigo(); // Llamamos a la función para que el enemigo elija su mascota
     } else if (inputpydos.checked) {
-        spanMascotaJugador.innerHTML = 'Pydos';
+        spanMascotaJugador.innerHTML = '<img src="./assets/mokepons_mokepon_pydos_attack.png" alt="Pydos" class="imagen-mascota">';
         sectionseleccionarMascota.style.display = 'none';
         sectionseleccionarAtaque.style.display = 'block';
+        seleccionarMascotaEnemigo(); // Llamamos a la función para que el enemigo elija su mascota
     } else {
         alert('¡Selecciona una mascota para jugar!');  // Si no se selecciona ninguna mascota, mostramos una alerta
     }
 }
 
-
+// Función para seleccionar una mascota enemiga de forma aleatoria
 
 function seleccionarMascotaEnemigo() {
-    let mascotaAleatorio = aleatorio(1, 6)
-    let spanmascota_enemigo = document.getElementById("mascota-enemigo")
+    let mascotaAleatorio = aleatorio(1, 6);
+    let spanmascotaEnemigo = document.getElementById("mascota-enemigo");
+    
     if (mascotaAleatorio == 1) {
-        spanmascota_enemigo.innerHTML = 'Hipodge'
+        spanmascotaEnemigo.innerHTML = '<img src="./assets/mokepons_mokepon_hipodoge_attack.webp" alt="Hipodge" class="imagen-mascota">';
     } else if (mascotaAleatorio == 2) {
-        spanmascota_enemigo.innerHTML = 'Capipepo'
+        spanmascotaEnemigo.innerHTML = '<img src="./assets/mokepons_mokepon_capipepo_attack.webp" alt="Capipepo" class="imagen-mascota">';
     } else if (mascotaAleatorio == 3) {
-        spanmascota_enemigo.innerHTML = 'Ratigueya'
+        spanmascotaEnemigo.innerHTML = '<img src="./assets/mokepons_mokepon_ratigueya_attack.webp" alt="Ratigueya" class="imagen-mascota">';
     } else if (mascotaAleatorio == 4) {
-        spanmascota_enemigo.innerHTML = 'Langostelvis'
+        spanmascotaEnemigo.innerHTML = '<img src="./assets/mokepons_mokepon_Langostelvis_attack.png" alt="Langostelvis" class="imagen-mascota">';
     } else if (mascotaAleatorio == 5) {
-        spanmascota_enemigo.innerHTML = 'Tucapalma'
+        spanmascotaEnemigo.innerHTML = '<img src="./assets/mokepons_mokepon_Tucapalma_attack.png" alt="Tucapalma" class="imagen-mascota">';
     } else if (mascotaAleatorio == 6) {
-        spanmascota_enemigo.innerHTML = 'Pydos'
-    } else {
-        alert('Selecciona una mascota')
+        spanmascotaEnemigo.innerHTML = '<img src="./assets/mokepons_mokepon_pydos_attack.png" alt="Pydos" class="imagen-mascota">';
     }
 }
 
-
 function ataqueFuego() {
-    ataqueJugador = 'Fuego'
+    ataqueJugador = '🔥 FUEGO'
     ataqueAleatorioEnemigo()
 }
 function ataqueAgua() {
-    ataqueJugador = 'Agua'
+    ataqueJugador = '💧 AGUA'
     ataqueAleatorioEnemigo()
 } function ataqueTierra() {
-    ataqueJugador = 'Tierra'
+    ataqueJugador = '🌍 TIERRA'
     ataqueAleatorioEnemigo()
 }
 
@@ -120,11 +130,11 @@ function ataqueAleatorioEnemigo() {
     let ataqueAleatorio = aleatorio(1, 3);
 
     if (ataqueAleatorio == 1) {
-        ataqueEnemigo = 'Fuego';
+        ataqueEnemigo = '🔥 FUEGO';
     } else if (ataqueAleatorio == 2) {
-        ataqueEnemigo = 'Agua';
+        ataqueEnemigo = '💧 AGUA';
     } else {
-        ataqueEnemigo = 'Tierra';
+        ataqueEnemigo = '🌍 TIERRA';
     }
     combate();
 }
@@ -134,21 +144,21 @@ function combate() {
     let spanVidasEnemigo = document.getElementById('vidas-enemigo')
 
     if (ataqueEnemigo == ataqueJugador) {
-        crearMensaje("EMPATE")
+        crearMensaje("🤜 EMPATE 🤛")
     } else if (ataqueJugador == 'Fuego' && ataqueEnemigo == 'Tierra') {
-        crearMensaje("GANASTE")
+        crearMensaje("🥳 GANASTE 🥳")
         vidasEnemigo--;
         spanVidasEnemigo.innerHTML = vidasEnemigo;
     } else if (ataqueJugador == 'Agua' && ataqueEnemigo == 'Fuego') {
-        crearMensaje("GANASTE")
+        crearMensaje("🥳 GANASTE 🥳")
         vidasEnemigo--;
         spanVidasEnemigo.innerHTML = vidasEnemigo;
     } else if (ataqueJugador == 'Tierra' && ataqueEnemigo == 'Agua') {
-        crearMensaje("GANASTE")
+        crearMensaje("🥳 GANASTE 🥳")
         vidasEnemigo--;
         spanVidasEnemigo.innerHTML = vidasEnemigo;
     } else {
-        crearMensaje("PERDISTE")
+        crearMensaje("😭 PERDISTE 😭")
         vidasJugador--;
         spanVidasJugador.innerHTML = vidasJugador;
     }
@@ -158,9 +168,12 @@ function combate() {
 function revisarVidas() {
 
     if (vidasEnemigo === 0) {
-        crearMensajeFinal("Felicitaciones, Ganaste...🥳 ")
+        let crearMensajeFinal = "Felicitaciones, 🥳 GANASTE 🥳";
+        alert(crearMensajeFinal);  // Muestra el mensaje en una ventana de alerta
     } else if (vidasJugador === 0) {
-        crearMensajeFinal("Lo siento, Perdiste...😭")
+        let crearMensajeFinal = "Lo siento, 😭 PERDISTE 😭";
+        alert(crearMensajeFinal);  // Muestra el mensaje en una ventana de alerta
+        reiniciarJuego()
     }
 }
 
@@ -180,15 +193,19 @@ function crearMensajeFinal(resultadoFinal) {
 }
 
 function crearMensaje(resultado = '') {
-    let sectionMensajes = document.getElementById('mensajes')
-    let parrafo = document.createElement('p')
-    parrafo.innerHTML = 'Tu mascota atacó con ' + ataqueJugador + ', la mascota del enemigo atacó con ' + ataqueEnemigo + ' - ' + resultado
-    sectionMensajes.appendChild(parrafo)
+    let mensaje = 'Tu mascota atacó con ' + ataqueJugador + '\n' +
+    'La mascota del enemigo atacó con ' + ataqueEnemigo + '\n' +
+    '📌 ' + resultado;    
+    alert(mensaje);  // Muestra el mensaje en una ventana de alerta
 }
 function reiniciarJuego() {
     location.reload();
 }
-function aleatorio(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min)
+
+function cambiarFondo() {
+    document.body.style.backgroundImage = "url('./assets/battle.jpg')";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundRepeat = "no-repeat";
 }
 window.addEventListener('load', iniciarJuego)

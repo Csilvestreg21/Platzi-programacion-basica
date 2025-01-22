@@ -3,7 +3,6 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #041562;
     margin: 0;
     padding: 0;
     color: white;
@@ -12,6 +11,10 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
+    background-image: url("../assets/fondo-vector.jpg");
+    background-size: cover; /* La imagen cubre todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* No repite la imagen */
 }
 
 .titulo {
@@ -92,11 +95,10 @@ input[type="radio"]:checked + label {
 
 /* Estilos generales */
 #seleccionar-ataque {
-    background-color: #f9f9f9;
+    background-color: transparent;
     padding: 20px;
     margin-top: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
@@ -107,11 +109,51 @@ input[type="radio"]:checked + label {
     margin-bottom: 20px;
     color: #333;
 }
+.info-vidas {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo con opacidad para mejorar visibilidad */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    
+}
+h1{
+    font-family: 'Poppins';
+    font-size: 45px;
+    color: #FFD700;  /* Color dorado para las palabras clave */
 
+}
 /* Sección de información de vidas */
 .info-vidas p {
-    font-size: 18px;
-    color: #333;
+    align-items: center;
+    font-size: 20px; /* Aumentamos el tamaño de los textos "strong" */
+    color: #FFD700;  /* Color dorado para las palabras clave */
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    margin-left: 10px;
+}
+.info-vidas strong {
+    font-size: 20px; /* Aumentamos el tamaño de los textos "strong" */
+    color: #FFD700;  /* Color dorado para las palabras clave */
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    margin-left: 10px;
+}
+.imagen-mascota {
+    width: 100px;  /* Aumentamos el tamaño de la imagen */
+    height: 100px; /* Aseguramos que las imágenes sean cuadradas */
+    border-radius: 30%;  /* Hacemos las imágenes circulares */
+    border: 4px solid #FFD700;  /* Borde de color dorado alrededor de la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra suave para dar profundidad */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Efectos de transición */
+    cursor: pointer;  /* Aparece como un cursor de mano */
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
+.imagen-mascota:hover {
+    transform: scale(1.1); /* Aumentamos ligeramente el tamaño de la imagen */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6); /* Sombra más fuerte en hover */
+    border-color: #FF6347;  /* Cambiar el borde a un color diferente al hacer hover */
 }
 
 /* Botones de ataque */
@@ -210,9 +252,9 @@ button:disabled {
 #boton-fuego,
 #boton-agua,
 #boton-tierra {
-    width: 120px;
-    height: 40px;
-    background-color: #FFD700;
+    width: 123px;
+    height: 50px;
+    background-color: #ff6f61;
     border: none;
     border-radius: 25px;
     font-size: 18px;
@@ -224,8 +266,8 @@ button:disabled {
 #boton-fuego:hover,
 #boton-agua:hover,
 #boton-tierra:hover {
-    background-color: #FF6347; /* Color al pasar el cursor */
-    color: white;
+    background-color: #FFD700; /* Color al pasar el cursor */
+    color: black;
 }
 
 #Reiniciar {
@@ -249,5 +291,4 @@ button:disabled {
     background-color: #FF6347; /* Cambia el color al pasar el cursor */
     color: white;
 }
-
 
