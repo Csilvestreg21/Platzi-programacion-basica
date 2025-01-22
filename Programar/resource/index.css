@@ -1,0 +1,118 @@
+/* Estilo general para la página */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../resource/inicial.jpg");
+    background-size: cover; /* La imagen cubre todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* No repite la imagen */
+}
+
+h1 {
+    font-size: 36px;
+    color: #f9f8ae; /* Un color verde agradable */
+    padding: 50px;
+    margin-bottom:40px;
+}
+
+p {
+    font-size: 20px;
+    color: #00796b;
+}
+
+/* Estilo para la sección de los juegos */
+#juegos {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    gap: 20px; /* Espacio entre los bloques de los juegos */
+}
+
+/* Estilo de cada juego */
+.juego {
+    background-color: transparent;
+    padding: 25px;
+    border-radius: 15px;
+    /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); */
+    width: 47%;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el mouse sobre el bloque de juego */
+.juego:hover {
+    transform: translateY(-10px); /* Levanta el bloque ligeramente */
+}
+
+/* Estilo de los botones */
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #FF9800; /* Color atractivo para el botón */
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+/* Cambio de color del botón al hacer hover */
+button:hover {
+    background-color: #ff5722;
+}
+
+/* Estilo de las imágenes de los juegos */
+#piedraPapelTijera img, #mokepon img {
+    width: 120px;
+    height: 120px;
+    margin: 15px;
+    border-radius: 50%; /* Hacer las imágenes circulares */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efecto de animación en las imágenes */
+#piedraPapelTijera img:hover, #mokepon img:hover {
+    transform: scale(1.1); /* Aumentar tamaño en hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    border-color: #FF6347; /* Cambiar el borde a color rojo */
+}
+
+/* Estilo para el footer */
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+    text-align: center;
+    padding: 40px;
+}
+
+footer p {
+    margin: 0;
+    color: white;
+    padding: 8px;
+}
+
+/* Estilo para las imágenes dentro de los juegos */
+.imagen-juego {
+    width: 120px;  /* Tamaño grande de la imagen */
+    height: 120px;
+    border-radius: 50%;  /* Hacer las imágenes circulares */
+    border: 4px solid #FFD700;  /* Borde dorado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Efectos de transición */
+    cursor: pointer;  /* El cursor se ve como un dedo */
+    margin-right: 20px; /* Espacio entre imagen y texto */
+}
+
+.imagen-juego:hover {
+    transform: scale(1.1); /* Aumentar ligeramente el tamaño */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6); /* Sombra más fuerte */
+    border-color: #FF6347;  /* Cambiar color del borde */
+}
