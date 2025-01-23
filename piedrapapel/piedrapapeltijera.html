@@ -1,10 +1,37 @@
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Mi primera programada</title>
-    <script src="./js/codigo.js"></script>
-  </head>
-  <body>
-    <h1>Piedra, papel o tijera</h1>
-  </body>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piedra, Papel o Tijera</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="./js/codigo.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>¡Piedra, Papel o Tijera!</h1>
+    <h2>Desafía a la computadora y sé el primero en ganar 3 rondas.</h2>
+  </header>
+  <main>
+    <section id="juego">
+      <div id="opciones">
+        <button class="btn" data-eleccion="1"><img src="./js/roca.png" alt="Piedra" /></button>
+        <button class="btn" data-eleccion="2"><img src="./js/papel.png" alt="Papel" /></button>
+        <button class="btn" data-eleccion="3"><img src="./js/tijera.png" alt="Tijera" /></button>
+      </div><br>
+      <h3>Resultado del Juego</h3>
+      <br>
+      <div id="resultado">
+        <p id="mensaje">Elige tu opción para comenzar.</p>
+      </div>
+      <div id="marcador">
+        <p>Victorias: <span id="victorias">0</span></p>
+        <p>Derrotas: <span id="derrotas">0</span></p>
+      </div>
+    </section>
+  </main>
+</body>
+
 </html>

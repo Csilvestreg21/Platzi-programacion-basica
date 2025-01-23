@@ -1,4 +1,7 @@
 /* Estilo general para la página */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sriracha&display=swap');
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -8,19 +11,44 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url("../resource/inicial.jpg");
+    background-image: url("../resource/inicial.avif");
     background-size: cover; /* La imagen cubre todo el fondo */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* No repite la imagen */
 }
 
 h1 {
-    font-size: 36px;
-    color: #f9f8ae; /* Un color verde agradable */
-    padding: 50px;
-    margin-bottom:40px;
+    font-family: 'Bangers', cursive; /* Fuente llamativa y moderna */
+    font-size: 46px; /* Tamaño grande para destacar */
+    color: #FFD700; /* Color vibrante */
+    text-align: center; /* Centra el texto */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4), 0 0 10px #FF4500; /* Sombra con efecto dorado */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    margin-bottom: 15px; /* Espaciado con el contenido inferior */
+    transition: transform 0.3s ease, text-shadow 0.3s ease; /* Efecto de hover */
 }
 
+h1:hover {
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño */
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6), 0 0 20px #FFD700; /* Sombra más intensa */
+    color: #FF4500; /* Cambia el color al dorado */
+}
+h2 {
+    font-family: 'Permanent Marker', cursive; /* Fuente llamativa */
+    font-size: 2em; /* Subtítulo más pequeño */
+    color: #FFD700; /* Color turquesa atractivo */
+    text-align: center; /* Centrado */
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4), 0 0 10px #FF4500; /* Sombra con efecto dorado */
+    margin-bottom: 10px; /* Separación con el resto del contenido */
+}
+
+small {
+    font-size: 1.2rem; /* Subtítulo más pequeño */
+    color: white; /* Naranja vibrante */
+    display: block; /* Coloca el subtítulo en una nueva línea */
+    margin-top: 5px; /* Espacio entre título y subtítulo */
+}
 p {
     font-size: 20px;
     color: #00796b;
