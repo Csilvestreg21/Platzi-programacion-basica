@@ -12,17 +12,101 @@ body {
     height: 100vh;
     flex-direction: column;
     background-image: url("../assets/fondo-vector.jpg");
-    background-size: cover; /* La imagen cubre todo el fondo */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* No repite la imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
+/* Estilos para pantallas pequeñas */
+@media (max-width: 600px) {
+    .titulo {
+        font-size: 36px;
+    }
+
+    .subtitulo {
+        font-size: 18px;
+    }
+
+    .tarjetas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tarjeta-de-mokepon {
+        width: 150px;
+        height: 150px;
+    }
+
+    .tarjeta-de-mokepon img {
+        width: 60px;
+        height: 60px;
+    }
+
+    #boton-mascotas {
+        width: 160px;
+        height: 50px;
+        font-size: 16px;
+        padding: 10px 20px;
+        /* Espaciado interno del botón */
+
+    }
+
+    #seleccionar-ataque h2 {
+        font-size: 18px;
+    }
+
+    .info-vidas {
+        font-size: 16px;
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .imagen-mascota {
+        width: 80px;
+        height: 80px;
+    }
+
+    .botones-ataque button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    #tablero-resultados {
+        width: 90%;
+    }
+
+    .tarjeta {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .tarjetas-resultados {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #boton-fuego,
+    #boton-agua,
+    #boton-tierra {
+        width: 100px;
+        height: 40px;
+        padding: 10px 20px;
+        /* Espaciado interno del botón */
+    }
+
+    #boton-reiniciar {
+        width: 180px;
+        height: 50px;
+    }
+}
+
+/* Estilos generales */
 .titulo {
     font-family: 'Fredoka One', cursive;
     font-size: 48px;
     text-align: center;
     margin-bottom: 10px;
-    color: #FFD700; /* Color dorado para darle un toque atractivo */
+    color: #FFD700;
 }
 
 .subtitulo {
@@ -59,15 +143,15 @@ body {
 .tarjeta-de-mokepon img {
     width: 80px;
     height: 80px;
-    margin: 10px 0;
+    margin: -17px 0px;
 }
 
 input[type="radio"] {
     display: none;
 }
 
-input[type="radio"]:checked + label {
-    background-color: #FF6347; /* Color de fondo cuando está seleccionado */
+input[type="radio"]:checked+label {
+    background-color: #FF6347;
 }
 
 .contenedor-boton {
@@ -89,7 +173,7 @@ input[type="radio"]:checked + label {
 }
 
 #boton-mascotas:hover {
-    background-color: #FF6347; /* Cambia el color al pasar el cursor */
+    background-color: #FF6347;
     color: white;
 }
 
@@ -102,61 +186,63 @@ input[type="radio"]:checked + label {
     text-align: center;
 }
 
-/* Título */
 #seleccionar-ataque h2 {
     font-size: 24px;
     font-family: 'Arial', sans-serif;
     margin-bottom: 20px;
     color: #333;
 }
+
 .info-vidas {
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo con opacidad para mejorar visibilidad */
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     padding: 20px;
     margin: 20px;
     text-align: center;
-    
 }
-h1{
+
+h1 {
     font-family: 'Poppins';
     font-size: 45px;
-    color: #FFD700;  /* Color dorado para las palabras clave */
-
+    color: #FFD700;
 }
-/* Sección de información de vidas */
+
 .info-vidas p {
-    align-items: center;
-    font-size: 20px; /* Aumentamos el tamaño de los textos "strong" */
-    color: #FFD700;  /* Color dorado para las palabras clave */
-    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    font-size: 20px;
+    color: #FFD700;
+    margin-right: 20px;
     margin-left: 10px;
-}
-.info-vidas strong {
-    font-size: 20px; /* Aumentamos el tamaño de los textos "strong" */
-    color: #FFD700;  /* Color dorado para las palabras clave */
-    margin-right: 20px; /* Espacio entre la imagen y el texto */
-    margin-left: 10px;
-}
-.imagen-mascota {
-    width: 100px;  /* Aumentamos el tamaño de la imagen */
-    height: 100px; /* Aseguramos que las imágenes sean cuadradas */
-    border-radius: 30%;  /* Hacemos las imágenes circulares */
-    border: 4px solid #FFD700;  /* Borde de color dorado alrededor de la imagen */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra suave para dar profundidad */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Efectos de transición */
-    cursor: pointer;  /* Aparece como un cursor de mano */
-    margin-right: 20px; /* Espacio entre la imagen y el texto */
-}
-.imagen-mascota:hover {
-    transform: scale(1.1); /* Aumentamos ligeramente el tamaño de la imagen */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6); /* Sombra más fuerte en hover */
-    border-color: #FF6347;  /* Cambiar el borde a un color diferente al hacer hover */
+    text-align: left;  /* Alinea el texto a la izquierda */
+
 }
 
-/* Botones de ataque */
+.info-vidas strong {
+    font-size: 20px;
+    color: #FFD700;
+    margin-right: 30px;
+    margin-left: 10px;
+}
+
+.imagen-mascota {
+    width: 100px;
+    height: 100px;
+    border-radius: 30%;
+    border: 4px solid #FFD700;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.imagen-mascota:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
+    border-color: #FF6347;
+}
+
 .botones-ataque button {
     background-color: #ff6f61;
     color: white;
@@ -177,7 +263,6 @@ h1{
     transform: scale(0.98);
 }
 
-/* Estilo del tablero de resultados */
 #tablero-resultados {
     display: none;
     padding: 20px;
@@ -195,7 +280,6 @@ h1{
     color: #333;
 }
 
-/* Tarjetas de resultados */
 .tarjetas-resultados {
     display: flex;
     justify-content: space-around;
@@ -224,11 +308,13 @@ h1{
     font-size: 16px;
     margin: 5px 0;
 }
+
 .acciones-tablero {
     display: flex;
     justify-content: space-evenly;
     margin-top: 20px;
 }
+
 button {
     padding: 10px 20px;
     font-size: 16px;
@@ -266,7 +352,7 @@ button:disabled {
 #boton-fuego:hover,
 #boton-agua:hover,
 #boton-tierra:hover {
-    background-color: #FFD700; /* Color al pasar el cursor */
+    background-color: #FFD700;
     color: black;
 }
 
@@ -288,7 +374,184 @@ button:disabled {
 }
 
 #boton-reiniciar:hover {
-    background-color: #FF6347; /* Cambia el color al pasar el cursor */
+    background-color: #FF6347;
     color: white;
 }
 
+/* General para dispositivos pequeños (como móviles) */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .titulo {
+        font-size: 32px;
+        /* Reducimos el tamaño para pantallas más pequeñas */
+        margin-bottom: 15px;
+    }
+
+    .subtitulo {
+        font-size: 18px;
+        /* Reducimos el tamaño */
+        margin-bottom: 10px;
+    }
+
+    .tarjetas {
+        flex-direction: column;
+        /* Cambiamos a columna para que las tarjetas se apilen */
+        align-items: center;
+    }
+
+    .tarjeta-de-mokepon {
+        width: 150px;
+        /* Hacemos las tarjetas más pequeñas */
+        height: 150px;
+        padding: 8px;
+    }
+
+    .tarjeta-de-mokepon img {
+        width: 70px;
+        /* Reducimos el tamaño de las imágenes */
+        height: 70px;
+    }
+
+    #boton-mascotas {
+        width: 180px;
+        /* Reducimos el tamaño de los botones */
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .info-vidas {
+        font-size: 16px;
+        /* Reducimos el tamaño del texto */
+        padding: 10px;
+        margin: 15px;
+    }
+
+    .imagen-mascota {
+        width: 80px;
+        /* Reducimos el tamaño de las imágenes */
+        height: 80px;
+    }
+
+    .botones-ataque button {
+        font-size: 14px;
+        /* Reducimos el tamaño de los botones */
+        padding: 10px 20px;
+    }
+
+    #boton-fuego,
+    #boton-agua,
+    #boton-tierra {
+        width: 107px;
+        height: 43px;
+        padding: 8px 20px;
+    }
+
+    #boton-reiniciar {
+        width: 180px;
+        /* Reducimos el tamaño */
+        height: 45px;
+        font-size: 16px;
+    }
+
+    /* Ajustamos el tablero de resultados */
+    #tablero-resultados {
+        width: 90%;
+        /* Hacemos el tablero más pequeño */
+    }
+
+    .tarjeta {
+        width: 100%;
+        /* Hacemos que las tarjetas ocupen todo el ancho en móviles */
+        margin-bottom: 15px;
+    }
+
+    .acciones-tablero button {
+        font-size: 14px;
+        /* Reducimos el tamaño de los botones */
+        padding: 8px 15px;
+    }
+}
+
+/* Para dispositivos más pequeños que los móviles, como los de 320px */
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 28px;
+        /* Aún más pequeño en pantallas muy pequeñas */
+    }
+
+    .subtitulo {
+        font-size: 16px;
+    }
+
+    .tarjetas {
+        gap: 10px;
+        /* Reducimos el espacio entre las tarjetas */
+    }
+
+    .tarjeta-de-mokepon {
+        width: 120px;
+        /* Hacemos las tarjetas aún más pequeñas */
+        height: 120px;
+    }
+
+    .tarjeta-de-mokepon img {
+        width: 60px;
+        /* Reducimos más el tamaño de las imágenes */
+        height: 60px;
+    }
+
+    #boton-mascotas {
+        width: 150px;
+        /* Reducimos más los botones */
+    }
+
+    .info-vidas {
+        font-size: 14px;
+        margin: 10px;
+    }
+
+    .imagen-mascota {
+        width: 60px;
+        /* Reducimos más el tamaño de las imágenes */
+        height: 60px;
+    }
+
+    .botones-ataque button {
+        font-size: 12px;
+        /* Reducimos el tamaño aún más */
+        padding: 6px 12px;
+    }
+
+    #boton-fuego,
+    #boton-agua,
+    #boton-tierra {
+        width: 121px;
+        height: 69px;
+        padding: 9px 20px;
+    }
+}
+
+#boton-reiniciar {
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+}
+
+.tarjetas-resultados {
+    flex-direction: column;
+    /* Apilamos las tarjetas de resultados */
+}
+
+.tarjeta {
+    width: 100%;
+}
+
+.acciones-tablero button {
+    font-size: 12px;
+    padding: 6px 12px;
+}
+}
