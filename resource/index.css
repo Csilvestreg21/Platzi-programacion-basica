@@ -61,7 +61,6 @@ p {
     justify-content: space-evenly;
     margin-top: 30px;
     gap: 20px;
-    flex-wrap: wrap; /* Permite que los bloques se ajusten a nuevas filas */
 }
 
 .juego {
