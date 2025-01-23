@@ -1,8 +1,9 @@
+/* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
     background-image: url("../js/fondo_1.jpg");
     text-align: center;
-    background-size: cover; /* La imagen cubre todo el fondo */
+    background-size: cover;
     margin: 0;
     padding: 0;
 }
@@ -12,56 +13,60 @@ header {
 }
 
 h1 {
-    font-family: 'Bangers', cursive; /* Fuente llamativa y moderna */
-    font-size: 46px; /* Tamaño grande para destacar */
-    color: #f1f1f1; /* Color vibrante */
-    text-align: center; /* Centra el texto */
-    text-transform: uppercase; /* Convierte el texto a mayúsculas */
-    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4), 0 0 10px #FF4500; /* Sombra con efecto dorado */
-    letter-spacing: 2px; /* Espaciado entre letras */
-    margin-bottom: 15px; /* Espaciado con el contenido inferior */
-    transition: transform 0.3s ease, text-shadow 0.3s ease; /* Efecto de hover */
+    font-family: 'Bangers', cursive;
+    font-size: 46px;
+    color: #f1f1f1;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4), 0 0 10px #FF4500;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
 h1:hover {
-    transform: scale(1.2); /* Aumenta ligeramente el tamaño */
-    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6), 0 0 20px #f1f1f1; /* Sombra más intensa */
-    color: #FF4500; /* Cambia el color al dorado */
+    transform: scale(1.2);
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6), 0 0 20px #f1f1f1;
+    color: #FF4500;
 }
 
 h2 {
     font-size: 1.7rem;
     color: #FFD700;
 }
+
 h3 {
-    font-family: 'Bangers', cursive; /* Fuente llamativa y moderna */
-    font-size: 1.7rem; /* Tamaño grande para destacar */
-    color: #f1f1f1; /* Color vibrante */
-    text-align: center; /* Centra el texto */
-    text-transform: uppercase; /* Convierte el texto a mayúsculas */
-    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4), 0 0 10px #FF4500; /* Sombra con efecto dorado */
-    letter-spacing: 2px; /* Espaciado entre letras */
-    margin-bottom: 15px; /* Espaciado con el contenido inferior */
-    transition: transform 0.3s ease, text-shadow 0.3s ease; /* Efecto de hover */
+    font-family: 'Bangers', cursive;
+    font-size: 1.7rem;
+    color: #f1f1f1;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4), 0 0 10px #FF4500;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
 #mensaje {
     font-size: 25px;
-    color: #fff; /* Cambié de #ffff a #fff */
+    color: #fff;
 }
 
 main {
     padding: 20px;
 }
+
 img {
     width: 100%;
-
 }
+
 #opciones {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: center;  /* Centra los botones horizontalmente */
+    align-items: center;  /* Centra los botones verticalmente */
+    gap: 20px;  /* Espaciado entre los botones */
     margin: 20px 0;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -73,8 +78,7 @@ img {
     font-size: 1.2rem;
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s ease;
-    width: 120px; /* Ancho fijo para los botones */
-
+    width: 120px;
 }
 
 .btn:hover {
@@ -84,7 +88,7 @@ img {
 
 #resultado {
     margin-top: 20px;
-    background: linear-gradient(to top left, #01040a, #144362, #50164a); /* Degradado de izquierda a derecha */
+    background: linear-gradient(to top left, #01040a, #144362, #50164a);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -92,39 +96,111 @@ img {
 
 #marcador {
     margin-top: 20px;
-    font-family: Arial, sans-serif; /* Establece la fuente */
-    font-size: 25px; /* Tamaño de texto */
-    color: #333; /* Color general del texto */
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    color: #333;
     padding: 10px;
-    text-align: center; /* Centrado del texto */
-    background: linear-gradient(to top left, #144362, #01040a, #50164a); /* Degradado de izquierda a derecha */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+    background: linear-gradient(to top left, #144362, #01040a, #50164a);
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #marcador p {
-    margin: 10px 0; /* Márgenes para separar los párrafos */
-    font-weight: bold; /* Texto en negrita */
-    color: #ffff; /* Color verde para victorias */
-
+    margin: 10px 0;
+    font-weight: bold;
+    color: #ffff;
 }
 
 #marcador span {
-    font-size: 24px; /* Tamaño más grande para los números */
-    font-weight: 700; /* Números más gruesos */
+    font-size: 24px;
+    font-weight: 700;
 }
 
 #victorias {
-    color: #28a745; /* Color verde para victorias */
+    color: #28a745;
 }
 
 #derrotas {
-    color: #dc3545; /* Color rojo para derrotas */
+    color: #dc3545;
 }
+
 footer {
     margin-top: 20px;
     background-color: #f1f1f1;
     padding: 10px;
     font-size: 0.9rem;
     color: #777;
+}
+
+/* Media Queries para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 36px; /* Reducir tamaño de h1 en pantallas más pequeñas */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Reducir tamaño de h2 */
+    }
+
+    h3 {
+        font-size: 1.5rem; /* Reducir tamaño de h3 */
+    }
+
+    #mensaje {
+        font-size: 22px; /* Reducir tamaño del mensaje */
+    }
+
+    #marcador {
+        font-size: 20px; /* Reducir tamaño del marcador */
+    }
+
+    .btn {
+        padding: 12px 16px; /* Reducir padding de los botones */
+        font-size: 1rem; /* Reducir el tamaño de la fuente de los botones */
+        width: auto; /* Ajuste automático al contenido */
+    }
+
+    #opciones {
+        flex-direction: column; /* Colocar los botones verticalmente */
+        gap: 10px;
+    }
+}
+
+/* Media Queries para pantallas más pequeñas (teléfonos muy pequeños) */
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 14px; /* Reducir el tamaño de la fuente para móviles pequeños */
+    }
+
+    h1 {
+        font-size: 28px; /* Reducir tamaño de h1 */
+    }
+
+    h2 {
+        font-size: 1.2rem; /* Reducir tamaño de h2 */
+    }
+
+    h3 {
+        font-size: 1.2rem; /* Reducir tamaño de h3 */
+    }
+
+    #mensaje {
+        font-size: 20px; /* Reducir tamaño del mensaje */
+    }
+
+    #marcador {
+        font-size: 18px; /* Reducir el tamaño del marcador */
+    }
+
+    .btn {
+        padding: 10px 15px;  /* Reducir el tamaño del padding */
+        font-size: 1rem;  /* Reducir el tamaño de la fuente */
+        width: 100px;  /* Ancho más pequeño */
+    }
+    
+    #opciones {
+        flex-direction: column;  /* Apila los botones en lugar de alinearlos horizontalmente */
+        gap: 10px;  /* Reducir el espacio entre los botones */
+    }
 }
