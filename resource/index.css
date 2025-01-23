@@ -12,77 +12,76 @@ body {
     align-items: center;
     flex-direction: column;
     background-image: url("../resource/inicial.avif");
-    background-size: cover; /* La imagen cubre todo el fondo */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* No repite la imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 h1 {
-    font-family: 'Bangers', cursive; /* Fuente llamativa y moderna */
-    font-size: 46px; /* Tamaño grande para destacar */
-    color: #FFD700; /* Color vibrante */
-    text-align: center; /* Centra el texto */
-    text-transform: uppercase; /* Convierte el texto a mayúsculas */
-    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4), 0 0 10px #FF4500; /* Sombra con efecto dorado */
-    letter-spacing: 2px; /* Espaciado entre letras */
-    margin-bottom: 15px; /* Espaciado con el contenido inferior */
-    transition: transform 0.3s ease, text-shadow 0.3s ease; /* Efecto de hover */
+    font-family: 'Bangers', cursive;
+    font-size: 46px;
+    color: #FFD700;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4), 0 0 10px #FF4500;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
 h1:hover {
-    transform: scale(1.2); /* Aumenta ligeramente el tamaño */
-    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6), 0 0 20px #FFD700; /* Sombra más intensa */
-    color: #FF4500; /* Cambia el color al dorado */
+    transform: scale(1.2);
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6), 0 0 20px #FFD700;
+    color: #FF4500;
 }
+
 h2 {
-    font-family: 'Permanent Marker', cursive; /* Fuente llamativa */
-    font-size: 2em; /* Subtítulo más pequeño */
-    color: #FFD700; /* Color turquesa atractivo */
-    text-align: center; /* Centrado */
-    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4), 0 0 10px #FF4500; /* Sombra con efecto dorado */
-    margin-bottom: 10px; /* Separación con el resto del contenido */
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2em;
+    color: #FFD700;
+    text-align: center;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4), 0 0 10px #FF4500;
+    margin-bottom: 10px;
 }
 
 small {
-    font-size: 1.2rem; /* Subtítulo más pequeño */
-    color: white; /* Naranja vibrante */
-    display: block; /* Coloca el subtítulo en una nueva línea */
-    margin-top: 5px; /* Espacio entre título y subtítulo */
+    font-size: 1.2rem;
+    color: white;
+    display: block;
+    margin-top: 5px;
 }
+
 p {
     font-size: 20px;
     color: #00796b;
 }
 
-/* Estilo para la sección de los juegos */
 #juegos {
     display: flex;
     justify-content: space-evenly;
     margin-top: 30px;
-    gap: 20px; /* Espacio entre los bloques de los juegos */
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que los bloques se ajusten a nuevas filas */
 }
 
-/* Estilo de cada juego */
 .juego {
     background-color: transparent;
     padding: 25px;
     border-radius: 15px;
-    /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); */
     width: 47%;
     text-align: center;
     transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
 }
 
-/* Efecto al pasar el mouse sobre el bloque de juego */
 .juego:hover {
-    transform: translateY(-10px); /* Levanta el bloque ligeramente */
+    transform: translateY(-10px);
 }
 
-/* Estilo de los botones */
 button {
     padding: 12px 25px;
     font-size: 18px;
-    background-color: #FF9800; /* Color atractivo para el botón */
+    background-color: #FF9800;
     border: none;
     color: white;
     border-radius: 10px;
@@ -91,29 +90,25 @@ button {
     margin-top: 15px;
 }
 
-/* Cambio de color del botón al hacer hover */
 button:hover {
     background-color: #ff5722;
 }
 
-/* Estilo de las imágenes de los juegos */
 #piedraPapelTijera img, #mokepon img {
     width: 120px;
     height: 120px;
     margin: 15px;
-    border-radius: 50%; /* Hacer las imágenes circulares */
+    border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-/* Efecto de animación en las imágenes */
 #piedraPapelTijera img:hover, #mokepon img:hover {
-    transform: scale(1.1); /* Aumentar tamaño en hover */
+    transform: scale(1.1);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-    border-color: #FF6347; /* Cambiar el borde a color rojo */
+    border-color: #FF6347;
 }
 
-/* Estilo para el footer */
 footer {
     margin-top: 40px;
     font-size: 14px;
@@ -127,20 +122,109 @@ footer p {
     padding: 8px;
 }
 
-/* Estilo para las imágenes dentro de los juegos */
 .imagen-juego {
-    width: 120px;  /* Tamaño grande de la imagen */
+    width: 120px;
     height: 120px;
-    border-radius: 50%;  /* Hacer las imágenes circulares */
-    border: 4px solid #FFD700;  /* Borde dorado */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra suave */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Efectos de transición */
-    cursor: pointer;  /* El cursor se ve como un dedo */
-    margin-right: 20px; /* Espacio entre imagen y texto */
+    border-radius: 50%;
+    border: 4px solid #FFD700;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+    margin-right: 20px;
 }
 
 .imagen-juego:hover {
-    transform: scale(1.1); /* Aumentar ligeramente el tamaño */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6); /* Sombra más fuerte */
-    border-color: #FF6347;  /* Cambiar color del borde */
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
+    border-color: #FF6347;
+}
+
+/* Media Queries para hacer la página responsiva */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    #juegos {
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .juego {
+        width: 80%; /* Los bloques de juego ocuparán más espacio en móviles */
+        margin-bottom: 20px; /* Añade un espacio entre los bloques */
+    }
+
+    button {
+        font-size: 16px; /* Ajusta el tamaño del botón */
+        padding: 10px 20px;
+    }
+
+    #piedraPapelTijera img, #mokepon img {
+        width: 100px; /* Ajusta el tamaño de las imágenes */
+        height: 100px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+    .imagen-juego {
+        width: 100px;  /* Ajuste en imágenes */
+        height: 100px;
+    }
+}
+
+/* Media Queries para pantallas pequeñas */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+    small {
+        font-size: 1.05rem;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    #juegos {
+        flex-direction: column; /* Los bloques de juego estarán en columna */
+    }
+
+    .juego {
+        width: 70%; /* Los bloques de juego ocuparán el 90% del ancho */
+    }
+
+    button {
+        font-size: 18px; /* Botones más pequeños */
+        padding: 8px 15px;
+    }
+
+    #piedraPapelTijera img, #mokepon img {
+        width: 80px; /* Imágenes más pequeñas */
+        height: 80px;
+    }
+
+    footer {
+        font-size: 10px;
+        padding: 20px;
+    }
+
+    .imagen-juego {
+        width: 80px; /* Ajuste de imagen */
+        height: 80px;
+    }
 }
